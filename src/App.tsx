@@ -1,11 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Number from "./useStateWithNumber";
+import String from './useStateWithString';
 
 function App() {
   return (
     <div className="App">
-      
+      <Number />
+      <br />
+      <br/>
+      <String />
     </div>
   );
 }
