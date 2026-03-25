@@ -1,5 +1,4 @@
 import '../static/homePage.css';
-import Tasks from './Task';
 function Homepage() {
 
     return (
