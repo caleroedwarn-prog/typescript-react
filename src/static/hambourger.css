@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+}
+.Hambourger{
+    width: 35px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+/* lines*/
+
+.Hambourger span{
+    display: block;
+    height: 40px;
+    width: 100%;
+    background: white;
+    border-radius: 2px;
+    transition: 0.4s;
+}
+
+/* Active */
+
+.Hambourger.active span{
+    background: red;
+}
+
+/* first line rotates */
+
+.Hambourger.active span:nth-child(1){
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.Hambourger.active span:nth-child(2){
+    opacity: 0;
+}
+
+.Hambourger.active span:nth-child(3){
+    transform: rotate(-45deg) translate(-6px, -6px);
+}
