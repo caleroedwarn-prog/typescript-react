@@ -2,3 +2,7 @@ body{
     margin: 0;
     color: white;
 }
+.Navbar{
+    display: flex;
+    color: aliceblue;
+}
