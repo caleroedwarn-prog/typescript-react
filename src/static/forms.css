@@ -1,0 +1,43 @@
+.task-form{
+    display: fles;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    padding: 15px;
+    background: #222;
+    border-radius: 10px;
+    color: white;
+}
+.task-form input,
+.task-form select,
+.task-form button{
+    padding: 8px 12px;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+}
+.task-form select.priority-low{
+    background-color: #4caf50;
+    color: white;
+}
+
+.task-form select.priority-medium{
+    background-color: #ff9800;
+    color: white;
+}
+
+.task-form select.priority-high{
+    background-color: #f44336;
+    color: white;
+}
+
+.task-form button{
+    background-color: #2196f3;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.task-form button:hover{
+    background-color: #1976d2;
+}
