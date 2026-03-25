@@ -42,3 +42,24 @@ body{
 .Hambourger.active span:nth-child(3){
     transform: rotate(-45deg) translate(1px, -1px);
 }
+
+.menu{
+    position: absolute;
+    top: 40px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    width: 30vw;
+    z-index: 9999;
+    border-radius: 20px;
+    background: rgba(0, 0, 0 , 0.7);
+}
+.menu a{
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+.menu a:hover{
+    background: rgb(90, 116, 18);
+}
