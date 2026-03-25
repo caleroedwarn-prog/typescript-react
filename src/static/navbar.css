@@ -4,5 +4,18 @@ body{
 }
 .Navbar{
     display: flex;
-    color: aliceblue;
+    gap: 40px;
+    padding: 15px;
+    background: #0f172a;
+    justify-content: center;
+}
+.nav-link{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.nav-link:hover{
+    color: cyan;
+    text-decoration: underline;
 }

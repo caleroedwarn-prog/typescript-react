@@ -3,8 +3,8 @@ import "../static/navbar.css"
 function Navbar(){
 return(
     <nav className="Navbar">
-        <Link to="/homepage">Home</Link>
-        <Link to="/tasks">Task</Link>
+        <Link to="/homepage" className="nav-link">Home</Link>
+        <Link to="/tasks" className="nav-link">Task</Link>
     </nav>
 )
 }
