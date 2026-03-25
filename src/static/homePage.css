@@ -18,4 +18,51 @@ body{
     gap: 25px;
     padding: 40px;
 }
+.Card{
+    width: 260px;
+    min-height: 190px;
+    padding: 20px;
+    border-radius: 16px;
+    opacity: 0;
+    transform: translateY(60px);
+    animation: fadeUp 1s ease forwards;
+    transition: 0.4s;
+}
 
+/* delay */
+.Card:nth-child(1){animation-delay: 0.2s;}
+.Card:nth-child(2){animation-delay: 0.4s;}
+.Card:nth-child(3){animation-delay: 0.6s;}
+.Card:nth-child(4){animation-delay: 0.8s;}
+
+/*gradient flow colors */
+
+.Card:nth-child(1){
+    background: linear-gradient(15deg, #00c6ff, #0072ff);
+}
+.Card:nth-child(2){
+    background: linear-gradient(135deg, #00ff87, #60efff);
+}
+.Card:nth-child(3){
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+}
+.Card:nth-child(4){
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+ /* hover effect */
+
+ .Card:hover{
+    transform: scale(1.08) rotate(0deg);
+    box-shadow: 0 12px 35px rgba(182, 178, 178, 0.4);
+ }
+
+ @keyframes fadeUp {
+    from{
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    to{
+        opacity: 1;
+        
+    }
+ }
