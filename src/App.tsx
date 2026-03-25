@@ -3,8 +3,9 @@ import React from 'react';
 import Homepage from './pages/homePage';
 import './static/homePage.css'
 import Tasks from './pages/Task';
-import Navbar from './components/Navbar';
 import Layout from './components/Layout';
+import PreviouseTask from './pages/previoustask';
+
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route path="/tasks" element={<Tasks />} />
             <Route path="/homePage" element={<Homepage />} />
+            <Route path='/previouseTask' element={<PreviouseTask />}/>
           </Route>
         </Routes>
       </BrowserRouter>

@@ -24,7 +24,6 @@ body{
     padding: 20px;
     border-radius: 16px;
     opacity: 0;
-    transform: translateY(60px);
     animation: fadeUp 1s ease forwards;
     transition: 0.4s;
 }
