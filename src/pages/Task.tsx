@@ -14,12 +14,12 @@ function Tasks(){
             <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
                 <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                     <button type="button" title="Close" className="Modal-close" onClick={() => setIsModalOpen(false)}>&times;</button>
-                    <form />
+                    <TaskForm />
                 </div>
             </div>
         )}
         <div className="task-list">
-            
+
         </div>
         </div>
     );
