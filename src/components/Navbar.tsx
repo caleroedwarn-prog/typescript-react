@@ -5,6 +5,7 @@ return(
     <nav className="Navbar">
         <Link to="/homepage" className="nav-link">Home</Link>
         <Link to="/tasks" className="nav-link">Task</Link>
+        <Link to="/previouseTask" className="nav-link">PreviouseTasks</Link>
     </nav>
 )
 }
