@@ -1,3 +1,4 @@
+import '../static/homePage.css';
 function Homepage() {
 
     return(
