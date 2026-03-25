@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TaskForm from "./form";
+import "../static/tasks.css";
 
 function Tasks(){
     const [isModalOpen, setIsModalOpen] = useState(false);
