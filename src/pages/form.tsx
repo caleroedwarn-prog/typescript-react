@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../static/forms.css";
 
 function TaskForm(){
 
@@ -33,6 +34,7 @@ function TaskForm(){
         <input
           type="text"
           name="name"
+          id="name"
           placeholder="Task Name / Label"
           value={form.name}
           onChange={handleChange}
@@ -43,6 +45,7 @@ function TaskForm(){
           Input Time
           <input type="time"
            name="time" 
+           id="time"
            value={form.time} 
            onChange={handleChange}
            />
@@ -52,6 +55,7 @@ function TaskForm(){
             <input
             type="date"
             name="date"
+            id="date"
             value={form.date}
             onChange={handleChange}
             />

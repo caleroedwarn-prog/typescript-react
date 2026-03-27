@@ -1,5 +1,5 @@
 .task-form{
-    display: fles;
+    display: flex;
     flex-direction: column;
     gap: 10px;
     max-width: 350px;
@@ -15,6 +15,20 @@
     border-radius: 6px;
     outline: none;
     font-size: 14px;
+    border: none;
+    background: none;
+    box-shadow: 0px 3px 4px rgba(33, 239, 247, 0.1),0px 3px 4px rgba(33, 239, 247, 0.2),0px 3px 4px rgba(33, 239, 247, 0.3),0px 3px 4px rgba(33, 239, 247, 0.1);
+    color: white;
+}
+#time{
+   width: 93%;
+}
+#date{
+    width: 93%;
+}
+#name{
+    height: 12vh;
+    text-align: center;
 }
 .task-form select.priority-low{
     background-color: #4caf50;
