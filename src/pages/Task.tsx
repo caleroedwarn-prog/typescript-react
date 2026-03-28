@@ -2,8 +2,19 @@ import { useState } from "react";
 import TaskForm from "./form";
 import "../static/tasks.css";
 
+type TaskType = {
+    name: string
+    date: string
+    time: string
+    priority: string
+  }
 function Tasks(){
+    const[task, setTask] = useState<TaskType[]>([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const addTask = (newTask: TaskType) => {
+        setTask(prev => [...prev, newTask]);
+        setIsModalOpen(false);
+    }
 
     return(
         <div className={`task-page ${isModalOpen ? "blurred" : ""}`}>
@@ -20,14 +31,18 @@ function Tasks(){
                     className="Modal-close" 
                     onClick={() => setIsModalOpen(false)}>
                         &times;</button>
-                    <TaskForm />
+                    <TaskForm addTask={addTask} />
                 </div>
             </div>
         )}
         <div className="task-list">
-            <ul>
-                <li></li>
-            </ul>
+            {task.map((task, index) => (
+                <div key={index} className="task-list">
+                    <h3>{task.name}</h3>
+                    <p>{task.date} - {task.time}</p>
+                    <p>Priority : {task.priority}</p>
+                </div>
+            ))}
 
         </div>
         </div>

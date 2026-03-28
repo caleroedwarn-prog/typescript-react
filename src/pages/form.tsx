@@ -1,7 +1,26 @@
 import { useState } from "react";
 import "../static/forms.css";
+import { useActionData } from "react-router-dom";
 
-function TaskForm(){
+type TaskType = {
+  name: string
+  date: string
+  time: string
+  priority: string
+}
+
+type Props = {
+  addTask: (task: TaskType) => void
+}
+function TaskForm({addTask}: Props){
+  const [tasks, setTask] = useState([]);
+
+  const [form, setForm] = useState({
+    name: "",
+    date: "",
+    time: "",
+    priority: "",
+  });
 
     const handleChange = (
       e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
@@ -20,18 +39,14 @@ function TaskForm(){
         return;
       }
       console.log(form);
-    };
-
-    const handleTask = () => {
-      
-    }
-
-    const[form, setForm] = useState({
+      addTask(form);
+      setForm({
         name: "",
         date: "",
         time: "",
         priority: ""
-    });
+      })
+    };
 
     return (
       <form onSubmit={handleSubmit} className="task-form">
