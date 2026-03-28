@@ -20,6 +20,10 @@
     box-shadow: 0px 3px 4px rgba(33, 239, 247, 0.1),0px 3px 4px rgba(33, 239, 247, 0.2),0px 3px 4px rgba(33, 239, 247, 0.3),0px 3px 4px rgba(33, 239, 247, 0.1);
     color: white;
 }
+.priority:nth-child(1){color: black;}
+.priority:nth-child(2){color: black;}
+.priority:nth-child(3){color: black;}
+
 #time{
    width: 93%;
 }

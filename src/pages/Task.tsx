@@ -12,14 +12,22 @@ function Tasks(){
 
         {/* modal */}
         {isModalOpen && (
-            <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
+            <div className="modal-overlay" onClick={() => setIsModalOpen(true)}>
                 <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                    <button type="button" title="Close" className="Modal-close" onClick={() => setIsModalOpen(false)}>&times;</button>
+                    <button 
+                    type="button" 
+                    title="Close" 
+                    className="Modal-close" 
+                    onClick={() => setIsModalOpen(false)}>
+                        &times;</button>
                     <TaskForm />
                 </div>
             </div>
         )}
         <div className="task-list">
+            <ul>
+                <li></li>
+            </ul>
 
         </div>
         </div>

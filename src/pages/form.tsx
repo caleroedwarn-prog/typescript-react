@@ -22,6 +22,10 @@ function TaskForm(){
       console.log(form);
     };
 
+    const handleTask = () => {
+      
+    }
+
     const[form, setForm] = useState({
         name: "",
         date: "",
@@ -67,9 +71,9 @@ function TaskForm(){
         onChange={handleChange}
         className={`priority-${form.priority.toLowerCase}`}
         >
-            <option>Low</option>
-            <option>Medium</option>
-            <option>High</option>
+            <option className="priority">Low</option>
+            <option className="priority">Medium</option>
+            <option className="priority">High</option>
         </select>
         <button type="submit">Add Task</button>
       </form>
