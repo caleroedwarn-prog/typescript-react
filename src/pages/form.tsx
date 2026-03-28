@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../static/forms.css";
 import { useActionData } from "react-router-dom";
 
@@ -27,6 +27,7 @@ function TaskForm({addTask}: Props){
     ) => {
       const { name, value } = e.target;
       setForm((prev) => ({ ...prev, [name]: value }));
+      e.preventDefault();
     };
     const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
       e.preventDefault();

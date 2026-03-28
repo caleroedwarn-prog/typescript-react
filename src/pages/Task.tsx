@@ -11,9 +11,17 @@ type TaskType = {
 function Tasks(){
     const[task, setTask] = useState<TaskType[]>([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const[deleteTasks, setDeleteTask] = useState<TaskType[]>([]);
     const addTask = (newTask: TaskType) => {
         setTask(prev => [...prev, newTask]);
         setIsModalOpen(false);
+    }
+    const deleteTask = (index: number) => {
+        const taskToDelete = task[index]
+
+        setTask(prev => prev.filter((_, i) => i !== index))
+
+        setDeleteTask(prev => [...prev, taskToDelete])
     }
 
     return(
