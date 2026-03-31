@@ -14,8 +14,11 @@ function Bin() {
 
   const restoreTask = (index: number) => {
     if (!deletedTask || index < 0 || index >= deletedTask.length) return;
+
     const taskToRestore = deletedTask[index];
+
     setTask((prev) => [...prev, taskToRestore]);
+    
     setDeletedTask((prev) => prev.filter((_, i) => i !== index));
   };
   return (
