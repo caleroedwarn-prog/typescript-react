@@ -15,15 +15,25 @@ function Layout() {
     return saved ? JSON.parse(saved) : [];
   });
 
+  const [deletedTask, setDeletedTask] = useState<TaskType[]>(() => {
+    const saved = localStorage.getItem("deletedTask");
+    return saved ? JSON.parse(saved) : [];
+  });
+
   useEffect(() => {
     localStorage.setItem("task", JSON.stringify(task));
   }, [task]);
+
+  useEffect(() => {
+    localStorage.setItem("deletedTask", JSON.stringify(deletedTask));
+  }, [deletedTask]);
+
   return (
     <>
       <Navbar />
       <Hambourger />
       <main>
-        <Outlet context={{ task, setTask }} />
+        <Outlet context={{ task, setTask, deletedTask, setDeletedTask }} />
       </main>
     </>
   );
