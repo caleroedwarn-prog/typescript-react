@@ -7,15 +7,28 @@ import { TaskType } from "../components/Layout";
 type ContextType = {
   task: TaskType[];
   setTask: React.Dispatch<React.SetStateAction<TaskType[]>>;
+  deletedTask: TaskType[];
+  setDeletedTask: React.Dispatch<React.SetStateAction<TaskType[]>>;
 };
 
 function Tasks() {
-  const { task, setTask } = useOutletContext<ContextType>();
+  const { task, setTask, deletedTask, setDeletedTask } =
+    useOutletContext<ContextType>();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const addTask = (newTask: TaskType) => {
     setTask((prev) => [...prev, newTask]);
     setIsModalOpen(false);
+  };
+
+  const deleteTask = (index: number) => {
+    if (!task || index < 0 || index >= task.length) return;
+
+    const taskToDelete = task[index];
+
+    setTask((prev) => prev.filter((_, i) => i !== index));
+
+    setDeletedTask((prev) => [...prev, taskToDelete]);
   };
 
   return (
@@ -54,6 +67,9 @@ function Tasks() {
               {task.date} - {task.time}
             </p>
             <p>Priority : {task.priority}</p>
+            <button type="button" onClick={() => deleteTask(index)}>
+              Delete
+            </button>
           </div>
         ))}
       </div>
