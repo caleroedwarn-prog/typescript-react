@@ -17,9 +17,9 @@ function App() {
       <h1 style={{ background: "black", color: "white" }}> ToDO Prior</h1>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="" element={<Layout />}>
             <Route path="/tasks" element={<Tasks />} />
-            <Route path="/homePage" element={<Homepage />} />
+            <Route path="/homepage" element={<Homepage />} />
             <Route path="/previouseTask" element={<PreviouseTask />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/bin" element={<Bin />} />
