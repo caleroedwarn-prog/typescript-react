@@ -20,6 +20,11 @@ function Layout() {
     return saved ? JSON.parse(saved) : [];
   });
 
+  const [previouseTask, setPreviouseTask] = useState<TaskType[]>(() => {
+    const saved = localStorage.getItem("previouseTAsk")
+    return saved ? JSON.parse(saved) : [];
+  })
+
   useEffect(() => {
     localStorage.setItem("task", JSON.stringify(task));
   }, [task]);
@@ -28,12 +33,16 @@ function Layout() {
     localStorage.setItem("deletedTask", JSON.stringify(deletedTask));
   }, [deletedTask]);
 
+  useEffect(() =>{
+    localStorage.setItem("previouseTask", JSON.stringify(previouseTask));
+  })
+
   return (
     <>
       <Navbar />
       <Hambourger />
       <main>
-        <Outlet context={{ task, setTask, deletedTask, setDeletedTask }} />
+        <Outlet context={{ task, setTask, deletedTask, setDeletedTask, previouseTask, setPreviouseTask }} />
       </main>
     </>
   );
