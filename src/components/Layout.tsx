@@ -21,7 +21,7 @@ function Layout() {
   });
 
   const [previouseTask, setPreviouseTask] = useState<TaskType[]>(() => {
-    const saved = localStorage.getItem("previouseTAsk")
+    const saved = localStorage.getItem("previouseTask")
     return saved ? JSON.parse(saved) : [];
   })
 

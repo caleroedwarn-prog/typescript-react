@@ -1,5 +1,6 @@
 import { useOutletContext } from "react-router-dom";
 import { TaskType } from "../components/Layout";
+import Task from "./Task";
 
 type contextType = {
   previouseTask: TaskType[];
@@ -26,10 +27,6 @@ function PreviouseTask() {
       {previouseTask?.map((task, index) => (
         <div key={index}>
           <h2>{task.name}</h2>
-          <button type="button" onClick={() => completeTask(index)}>
-            {" "}
-            Move to Tasks
-          </button>
         </div>
       ))}
     </>
