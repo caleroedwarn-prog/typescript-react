@@ -2,25 +2,37 @@ import { useOutletContext } from "react-router-dom";
 import { TaskType } from "../components/Layout";
 
 type contextType = {
-    previouseTask: TaskType[];
-    setPreviouseTask: React.Dispatch<React.SetStateAction<TaskType[]>>;
+  previouseTask: TaskType[];
+  setPreviouseTask: React.Dispatch<React.SetStateAction<TaskType[]>>;
 
-    deletedTask: TaskType[];
-    setDeletedTask: React.Dispatch<React.SetStateAction<TaskType[]>>;
+  deletedTask: TaskType[];
+  setDeletedTask: React.Dispatch<React.SetStateAction<TaskType[]>>;
 
-    task: TaskType[];
-    setTask: React.Dispatch<React.SetStateAction<TaskType[]>>;
+  task: TaskType[];
+  setTask: React.Dispatch<React.SetStateAction<TaskType[]>>;
 };
-function PreviouseTask(){
-    const { task, setPreviouseTask, setDeletedTask } = useOutletContext<contextType>();
+function PreviouseTask() {
+  const { previouseTask, setTask, setDeletedTask } =
+    useOutletContext<contextType>();
 
-    const completeTask = (index: number) => {
-     
-    }
-    return(
-        <>
-        <h2>Previous Tasks</h2>
-        </>
-    );
+  const completeTask = (index: number) => {
+    setTask((prev) => [...prev, previouseTask[index]]);
+    setDeletedTask((prev) => [...prev, previouseTask[index]]);
+  };
+  return (
+    <>
+      <h2>Previous Tasks</h2>
+      {previouseTask?.length === 0 && <p> No previous tasks</p>}
+      {previouseTask?.map((task, index) => (
+        <div key={index}>
+          <h2>{task.name}</h2>
+          <button type="button" onClick={() => completeTask(index)}>
+            {" "}
+            Move to Tasks
+          </button>
+        </div>
+      ))}
+    </>
+  );
 }
 export default PreviouseTask;
