@@ -1,6 +1,5 @@
 import { useOutletContext } from "react-router-dom";
 import { TaskType } from "../components/Layout";
-import Task from "./Task";
 
 type contextType = {
   previouseTask: TaskType[];
@@ -17,16 +16,22 @@ function PreviouseTask() {
     useOutletContext<contextType>();
 
   const completeTask = (index: number) => {
+
     setTask((prev) => [...prev, previouseTask[index]]);
+
     setDeletedTask((prev) => [...prev, previouseTask[index]]);
   };
+  const cleanPreviouseTask = previouseTask.filter(
+    (item) => item !== null && item !== undefined
+  );
   return (
     <>
       <h2>Previous Tasks</h2>
       {previouseTask?.length === 0 && <p> No previous tasks</p>}
-      {previouseTask?.map((task, index) => (
-        <div key={index}>
-          <h2>{task.name}</h2>
+      {cleanPreviouseTask.map((item, index) => (
+        <div key={index} style={{opacity : "0.5"}}>
+          <h2>{item.name}</h2>
+          <p>{item.date} - {item.time}</p>
         </div>
       ))}
     </>

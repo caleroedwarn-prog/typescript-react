@@ -46,6 +46,8 @@ function Tasks() {
     setPreviouseTask((prev) => [...prev, taskToComplete]); // add the completed task to the previouseTask list
   }
 
+  const cleanTask = task.filter((item) => item !== null && item !== undefined);
+
   return (
     <div className={`task-page ${isModalOpen ? "blurred" : ""}`}>
       <h2> Tasks </h2>
@@ -75,13 +77,13 @@ function Tasks() {
         </div>
       )}
       <div className="task-list">
-        {task.map((task, index) => (
+        {cleanTask.map((item, index) => (
           <div key={index} className="task-list">
-            <h3>{task.name}</h3>
+            <h3>{item.name}</h3>
             <p>
-              {task.date} - {task.time}
+              {item.date} - {item.time}
             </p>
-            <p>Priority : {task.priority}</p>
+            <p>Priority : {item.priority}</p>
             <button type="button" onClick={() => deleteTask(index)}>
               Delete
             </button>
