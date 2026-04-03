@@ -26,11 +26,11 @@ function Tasks() {
   const deleteTask = (index: number) => {
     if (!task || index < 0 || index >= task.length) return;
 
-    const taskToDelete = task[index];
+    const taskToDelete = task[index]; // stores the task to be deleted before removing it from the task list
 
-    setTask((prev) => prev.filter((_, i) => i !== index));
+    setTask((prev) => prev.filter((_, i) => i !== index)); // remove the task from the task list
 
-    setDeletedTask((prev) => [...prev, taskToDelete]);
+    setDeletedTask((prev) => [...prev, taskToDelete]); // add the deleted task to the deletedTask list for potential restoration later
   };
 
   return (
