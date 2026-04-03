@@ -9,7 +9,7 @@ type ContextType = {
   setDeletedTask: React.Dispatch<React.SetStateAction<TaskType[]>>;
 };
 function Bin() {
-  const { task, setTask, deletedTask, setDeletedTask } =
+  const { setTask, deletedTask, setDeletedTask } =
     useOutletContext<ContextType>();
 
   const restoreTask = (index: number) => {

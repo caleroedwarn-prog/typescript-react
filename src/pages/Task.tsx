@@ -12,7 +12,7 @@ type ContextType = {
 };
 
 function Tasks() {
-  const { task, setTask, deletedTask, setDeletedTask } =
+  const { task, setTask, setDeletedTask } =
     useOutletContext<ContextType>();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
