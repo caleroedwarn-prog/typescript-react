@@ -9,10 +9,12 @@ type ContextType = {
   setTask: React.Dispatch<React.SetStateAction<TaskType[]>>;
   deletedTask: TaskType[];
   setDeletedTask: React.Dispatch<React.SetStateAction<TaskType[]>>;
+  previouseTask: TaskType[];
+  setPreviouseTask: React.Dispatch<React.SetStateAction<TaskType[]>>;
 };
 
 function Tasks() {
-  const { task, setTask, setDeletedTask } =
+  const { task, setTask, setDeletedTask, setPreviouseTask } =
     useOutletContext<ContextType>();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -32,6 +34,17 @@ function Tasks() {
 
     setDeletedTask((prev) => [...prev, taskToDelete]); // add the deleted task to the deletedTask list for potential restoration later
   };
+
+  const completedTask = (index: number) => {
+    if (!task || index < 0 || index >= task.length)
+      return;
+
+    const taskToComplete = task[index]; // stores the task to be completed befor removing it from the task list
+
+    setTask((prev) => prev.filter((_, i) => i !== index)); // remove the task from the task list
+
+    setPreviouseTask((prev) => [...prev, taskToComplete]); // add the completed task to the previouseTask list
+  }
 
   return (
     <div className={`task-page ${isModalOpen ? "blurred" : ""}`}>
@@ -71,6 +84,9 @@ function Tasks() {
             <p>Priority : {task.priority}</p>
             <button type="button" onClick={() => deleteTask(index)}>
               Delete
+            </button>
+            <button type="button" onClick={() => completedTask(index)}>
+              Completed
             </button>
           </div>
         ))}

@@ -7,9 +7,12 @@ type ContextType = {
 
   deletedTask: TaskType[];
   setDeletedTask: React.Dispatch<React.SetStateAction<TaskType[]>>;
+
+  previouseTask: TaskType[];
+  setPreviouseTask: React.Dispatch<React.SetStateAction<TaskType[]>>;
 };
 function Bin() {
-  const { setTask, deletedTask, setDeletedTask } =
+  const { setTask, deletedTask, setDeletedTask, setPreviouseTask } =
     useOutletContext<ContextType>();
 
   const restoreTask = (index: number) => {
@@ -22,6 +25,17 @@ function Bin() {
     setTask((prev) => [...prev, taskToRestore]);
   
   };
+
+  const parmenentDeleteTask = (index: number) => {
+    if(!deletedTask || index < 0 || index >= deletedTask.length)
+      return;
+
+    const  taskToParmenentDelete = deletedTask[index];
+
+    setDeletedTask((prev) => prev.filter((_, i) => i !== index));
+
+    setPreviouseTask((prev) => [...prev, taskToParmenentDelete]);
+  }
   return (
     <>
       <h2> Bin Page</h2>
@@ -33,6 +47,9 @@ function Bin() {
           <h3> {task.name} </h3>
           <button type="button" onClick={() => restoreTask(index)}>
             Restore
+          </button>
+          <button type="button" onClick={() => parmenentDeleteTask(index)}>
+            Permanently Delete
           </button>
         </div>
       ))}
