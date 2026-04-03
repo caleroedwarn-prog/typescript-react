@@ -19,6 +19,8 @@ function Tasks() {
   const addTask = (newTask: TaskType) => {
     setTask((prev) => [...prev, newTask]);
     setIsModalOpen(false);
+    alert("Task added successfully");
+    console.log(newTask);
   };
 
   const deleteTask = (index: number) => {
