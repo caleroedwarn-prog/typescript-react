@@ -86,7 +86,7 @@ function Tasks() {
               <button type="button" id="delete" onClick={() => deleteTask(index)}>
                 Delete
               </button>
-              <button type="button" onClick={() => completedTask(index)}>
+              <button type="button" id="complete" onClick={() => completedTask(index)}>
                 Completed
               </button>
             </div>

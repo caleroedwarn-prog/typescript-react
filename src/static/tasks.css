@@ -61,6 +61,12 @@
     float: right;
     
 }
+#delete{
+    background: red;
+}
+#complete{
+    background: green;
+}
 .task-buttons {
     display: flex;
     float: right;
