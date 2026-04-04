@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
+import "../static/layer.css"
 import Hambourger from "./Hambourger";
 import { useState, useEffect } from "react";
 
@@ -40,7 +41,9 @@ function Layout() {
   return (
     <>
       <Navbar />
+      <div className="menulist">
       <Hambourger />
+      </div>
       <main>
         <Outlet context={{ task, setTask, deletedTask, setDeletedTask, previouseTask, setPreviouseTask }} />
       </main>
