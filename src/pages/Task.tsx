@@ -36,15 +36,14 @@ function Tasks() {
   };
 
   const completedTask = (index: number) => {
-    if (!task || index < 0 || index >= task.length)
-      return;
+    if (!task || index < 0 || index >= task.length) return;
 
     const taskToComplete = task[index]; // stores the task to be completed befor removing it from the task list
 
     setTask((prev) => prev.filter((_, i) => i !== index)); // remove the task from the task list
 
     setPreviouseTask((prev) => [...prev, taskToComplete]); // add the completed task to the previouseTask list
-  }
+  };
 
   const cleanTask = task.filter((item) => item !== null && item !== undefined);
 
@@ -56,8 +55,7 @@ function Tasks() {
         className="add-task-btn"
         onClick={() => setIsModalOpen(true)}
       >
-        {" "}
-        +{" "}
+        +
       </button>
 
       {/* modal */}
@@ -78,18 +76,20 @@ function Tasks() {
       )}
       <div className="task-list">
         {cleanTask.map((item, index) => (
-          <div key={index} className="task-list">
+          <div key={index} className="task-item">
             <h3>{item.name}</h3>
             <p>
               {item.date} - {item.time}
             </p>
             <p>Priority : {item.priority}</p>
-            <button type="button" onClick={() => deleteTask(index)}>
-              Delete
-            </button>
-            <button type="button" onClick={() => completedTask(index)}>
-              Completed
-            </button>
+            <div className="task-buttons">
+              <button type="button" id="delete" onClick={() => deleteTask(index)}>
+                Delete
+              </button>
+              <button type="button" onClick={() => completedTask(index)}>
+                Completed
+              </button>
+            </div>
           </div>
         ))}
       </div>

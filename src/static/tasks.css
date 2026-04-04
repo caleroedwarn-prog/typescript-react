@@ -56,3 +56,50 @@
 .add-task-btn:hover {
     background-color: #1976d2;
 }
+.task-page button{
+    display: block;
+    float: right;
+    
+}
+.task-buttons {
+    display: flex;
+    float: right;
+    position: relative;
+    top: -60px;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+.task-item button{
+    padding: 6px 12px;
+    border-radius: 6px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+h2{
+    position: relative;
+    text-align: center;
+    top: 90px;
+}
+.task-item {
+    position: relative;
+    top: 100px;
+    background: #292929;
+    border-radius: 12px;
+    padding: 18px;
+    margin: 18px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.task-item:nth-child(odd) {
+    background: #2f2f2f;
+    border-left: 5px solid red;
+
+}
+.task-item:nth-child(even) {
+    background: #01153a;
+    border-right: 5px solid ;
+}
