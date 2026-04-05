@@ -1,4 +1,6 @@
 import "../static/homePage.css";
+import React from "react";
+import "/public/note.png";
 import { Link } from "react-router-dom";
 
 function Homepage() {
@@ -6,7 +8,7 @@ function Homepage() {
     <>
     <div className="background">
       <div className="background-image">
-        <img src=""
+        <img src="public/note.png" alt="note" />
       </div>
     </div>
       <div className="main-content">
