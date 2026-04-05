@@ -1,0 +1,25 @@
+.bin-page{
+    position: relative;
+    top: 150px;
+    border-radius: 30px;
+}
+#Restore{
+    background: red;
+    border-radius: 30px;
+    border: none;
+    margin: 12px;
+}
+#deleteAll{
+    background: green;
+    border-radius: 20px;
+    border: none;
+    margin: 12px;
+}
+.bin-page:nth-child(odd){
+    background: #2f2f2f;
+    border-left: 5px solid red;
+}
+.bin-page:nth-child(even) {
+    background: #01153a;
+    border-right: 5px solid ;
+}

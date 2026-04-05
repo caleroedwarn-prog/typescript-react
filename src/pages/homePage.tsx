@@ -1,9 +1,21 @@
 import "../static/homePage.css";
+import { Link } from "react-router-dom";
 
 function Homepage() {
   return (
     <>
-      <div className="mainHeader">
+      <div className="main-content">
+        <pre>
+          <h1 style={{fontSize: "30px", position: "relative", left:"30px", top: "3px"}}>
+            Set Your TASKS <br />
+            </h1>
+            <h1 style={{ position: "relative", left: "50px", fontSize: "60px" }}>
+              with TODO PRIOR
+            </h1>
+
+          <br />
+          <b style={{ position: "relative", left: "100px" }}> start your discipline here <Link to="/tasks" className="nav-link"> - GET STARTED</Link></b>
+        </pre>
       </div>
 
       <section className="contentDiscription">

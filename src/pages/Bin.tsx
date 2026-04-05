@@ -1,5 +1,6 @@
 import { useOutletContext } from "react-router-dom";
 import { TaskType } from "../components/Layout";
+import "../static/bin.css";
 
 type ContextType = {
   task: TaskType[];
@@ -37,23 +38,24 @@ function Bin() {
     setPreviouseTask((prev) => [...prev, taskToParmenentDelete]);
   }
   return (
-    <>
+    <div>
       <h2> Bin Page</h2>
 
       {(deletedTask?.length ?? 0) === 0 && <p> No deleted tasks</p>}
-
-      {deletedTask?.map((task, index) => (
-        <div key={index}>
-          <h3> {task.name} </h3>
-          <button type="button" onClick={() => restoreTask(index)}>
-            Restore
-          </button>
-          <button type="button" onClick={() => parmenentDeleteTask(index)}>
-            Permanently Delete
-          </button>
-        </div>
-      ))}
-    </>
+      <div className="bin-page">
+        {deletedTask?.map((task, index) => (
+          <div key={index}>
+            <h3> {task.name} </h3>
+            <button type="button" id="Restore" onClick={() => restoreTask(index)}>
+              Restore
+            </button>
+            <button type="button" id="deleteAll" onClick={() => parmenentDeleteTask(index)}>
+              Permanently Delete
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 export default Bin;

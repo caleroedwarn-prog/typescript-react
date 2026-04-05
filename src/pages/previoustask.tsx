@@ -15,7 +15,7 @@ function PreviouseTask() {
   const { previouseTask, setTask, setDeletedTask } =
     useOutletContext<contextType>();
 
-  const completeTask = (index: number) => {
+  const completeTask = (index: number) => {   
 
     setTask((prev) => [...prev, previouseTask[index]]);
 
@@ -30,8 +30,11 @@ function PreviouseTask() {
       {previouseTask?.length === 0 && <p> No previous tasks</p>}
       {cleanPreviouseTask.map((item, index) => (
         <div key={index} style={{opacity : "0.5"}}>
-          <h2>{item.name}</h2>
+          <pre>
+          <h2>{item.name}
           <p>{item.date} - {item.time}</p>
+          </h2>
+          </pre>
         </div>
       ))}
     </>
