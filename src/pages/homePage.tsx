@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 function Homepage() {
   return (
     <>
-    <div className="background"></div>
+    <div className="background">
+      <div className="background-image">
+        <img src=""
+      </div>
+    </div>
       <div className="main-content">
         <pre>
           <h1 style={{fontSize: "30px", position: "relative", left:"30px", top: "3px"}}>
