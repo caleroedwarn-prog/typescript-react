@@ -40,8 +40,19 @@ function Features() {
               Deleted a task by mistake? Find it in the recycle bin and restore
               with just one tap.
             </p>
-            <Link to="/settings" className="feature-link">
-              Settings
+            <Link to="/recycling-bin" className="feature-link">
+              Recycling Bin
+            </Link>
+          </div>
+
+          
+          <div className="feature-card">
+            <h2> Previous Task</h2>
+            <p>
+              Not sure if you completed a task? Check your previous tasks to see what you've accomplished and what still needs attention.
+            </p>
+            <Link to="/recycling-bin" className="feature-link">
+              Recycling Bin
             </Link>
           </div>
         </div>
