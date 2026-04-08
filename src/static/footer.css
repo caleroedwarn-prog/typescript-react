@@ -13,3 +13,10 @@
     color: white;
     padding: 40px 20px;
 }
+.marker{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+}
