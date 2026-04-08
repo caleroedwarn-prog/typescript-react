@@ -1,0 +1,22 @@
+.Section p{
+    display: flex;
+    top: 20%; /* Use percentage for responsive positioning */
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px;
+    left: 35%; /* Keep as is or adjust percentage */
+    background: #1c2949;
+    width: 420px;
+    min-width: 100px;
+    min-height: 200px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border-right: 1px solid #f7971e;
+    font-family: cursive;
+}
+.section h2{
+    position: relative;
+    top: 100px;
+}
