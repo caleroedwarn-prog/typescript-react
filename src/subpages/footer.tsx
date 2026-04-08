@@ -46,13 +46,71 @@ function Footer(){
           </p>
           <p>
             Facebook:{" "}
-            <a href="https://facebook.com/Caleroedwarn" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://facebook.com/Caleroedwarn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Buamee Emmanuel
             </a>
           </p>
         </span>
-        <span className="Contact"><h3>Supports</h3></span>
-        <span className="Contact"><h3>Terms and Conditions</h3></span>
+
+        <span className="Contact">
+          <h3>Supports</h3>
+          <p>
+            <a
+              href="https://orangedigitalcenter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ODC
+            </a>
+          </p>
+
+          <p>
+            <a
+              href="https://digolearn.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              DigoLearn
+            </a>
+          </p>
+
+          <p>
+            <a
+              href="https://amazonwebservice.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              AWS
+            </a>
+          </p>
+
+          <p>
+            <a
+              href="https://googedevelopers.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Google Developers
+            </a>
+          </p>
+
+          <p>
+            <a
+              href="https://GDGoC.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+                GDGoC
+            </a>
+          </p>
+        </span>
+        <span className="Contact">
+          <h3>Terms and Conditions</h3>
+        </span>
       </div>
     );
 }
