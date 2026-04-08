@@ -34,7 +34,17 @@ function Footer(){
           </p>
           <p>
             LinkedIn:{" "}
-            <a href="https://linkedin.com/in/buameeemmanuel" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://linkedin.com/in/buameeemmanuel"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Buamee Emmanuel
+            </a>
+          </p>
+          <p>
+            Facebook:{" "}
+            <a href="https://facebook.com/Caleroedwarn" target="_blank" rel="noopener noreferrer">
               Buamee Emmanuel
             </a>
           </p>
