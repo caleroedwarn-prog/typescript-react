@@ -1,6 +1,7 @@
 .Footer{
     display: flex;
     flex-direction: row;
+    gap: 70px;
     background-color: black;
     color: white;
     padding: 40px 20px;

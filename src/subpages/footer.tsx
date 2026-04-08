@@ -104,12 +104,26 @@ function Footer(){
               target="_blank"
               rel="noopener noreferrer"
             >
-                GDGoC
+              GDGoC
             </a>
           </p>
         </span>
         <span className="Contact">
           <h3>Terms and Conditions</h3>
+
+          <p>
+            By using ToDo Prior, you agree to our{" "}
+            <a href="https://www.example.com/terms">Terms and Conditions</a>
+          </p>
+          <p>
+            For any questions or concerns, please contact our support team at{" "}
+            <a href="mailto:support@todo-prior.com">support@todo-prior.com</a>
+          </p>
+
+          <p>
+            ToDo Prior is committed to protecting your privacy. Please review our{" "}
+            <a href="https://www.example.com/privacy">Privacy Policy</a> for more information.
+          </p>
         </span>
       </div>
     );
