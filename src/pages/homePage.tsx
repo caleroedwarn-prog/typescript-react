@@ -128,12 +128,6 @@ function Homepage() {
               </Link>
             </span>
           </p>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
           <div className="Section">
             <h2>Backup</h2>
             <p>
@@ -155,19 +149,6 @@ function Homepage() {
               </span>
             </p>
           </div>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-
           <div className="Section">
             <h2>Recycling Bin</h2>
             <p>

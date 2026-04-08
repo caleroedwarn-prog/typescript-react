@@ -21,7 +21,7 @@ body{
 .Section{
     position: relative;
     height: 100vh; /* Adjust height as needed for the image area */
-    margin: 1%;
+
 }
 .Footer{
     background: #0f172a;
@@ -62,13 +62,13 @@ body{
 }
 .background-image img{
     position: absolute;
-    top: 30%;
+    top: 1;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     opacity: 0.13;
     border-radius: 20px;
     box-shadow: 100px 199px 190px rgba(0, 0, 0, 0.1);
-
+    object-fit: cover;
 }
 .main-content{
     position: relative;
