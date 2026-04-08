@@ -14,7 +14,7 @@ import Backup from './pages/Backup';
 function App() {
   return (
     <div className="App">
-      <h1 style={{ background: "black", color: "white" }}> ToDO Prior</h1>
+      <h1 style={{ background: "black", color: "white"}}> ToDO Prior</h1>
       <BrowserRouter>
         <Routes>
           <Route path="" element={<Layout />}>

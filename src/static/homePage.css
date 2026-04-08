@@ -7,17 +7,75 @@ body{
     background: #0f172a;
     color: white;
 }
+.AdditionalImage{
+    margin: 0;
+    padding: 0;
+}
+.AdditionalImage img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.13;
+}
+.Section{
+    position: relative;
+    height: 100vh; /* Adjust height as needed for the image area */
+    margin: 1%;
+}
+.Footer{
+    background: #0f172a;
+    margin-top: 90%;
+    width: 100%;
+    height: 100px;
+}
+.Section p{
+    position: absolute;
+    display: flex;
+    top: 20%; /* Use percentage for responsive positioning */
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px;
+    left: 35%; /* Keep as is or adjust percentage */
+    background: #1c2949;
+    width: 420px;
+    min-width: 100px;
+    min-height: 200px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border-right: 1px solid #f7971e;
+    font-family: cursive;
+}
+.Section h2{
+    position: absolute;
+    top: 10%; /* Position the heading on the image */
+    left: 35%; /* Align with the paragraph */
+    color: white;
+    font-size: 24px;
+}
 .main-content{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
 }
+.background-image img{
+    position: absolute;
+    top: 30%;
+    width: 100vw;
+    height: 90vh;
+    opacity: 0.13;
+    border-radius: 20px;
+    box-shadow: 100px 199px 190px rgba(0, 0, 0, 0.1);
+
+}
 .main-content{
     position: relative;
     left: 60px;
     background-color: rgba(0, 0, 0, 0.5);
-    width: 620px;
-    min-height: 300px;
+    width: 800px;
+    min-height: 450px;
     margin-top: 15%;
     margin-bottom: 10%;
     border-radius: 30px;
@@ -27,7 +85,7 @@ body{
 }
 .main-content h1, h1, b{
     position: inherit;
-    top: 35px;
+    top: 140px;
     justify-content: center;
 }
 .mainHeader{
