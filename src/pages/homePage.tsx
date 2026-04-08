@@ -1,16 +1,21 @@
 import "../static/homePage.css";
-import React from "react";
 import "../images/note.png";
-import { Link } from "react-router-dom";
 import ImageWelcome from "../subpages/home";
 import GridDisplay from "../subpages/gridDisplay";
-import writingImg from "../images/writing.jpg";
+import Features from "../subpages/features";
 
 function Homepage() {
   return (
     <>
-    <ImageWelcome /><br /><br /><br />
-    <GridDisplay />
+      <ImageWelcome />
+      <br />
+      <br />
+      <br />
+      <GridDisplay />
+      <br />
+      <br />
+      <br />
+      <Features />
       <div className="Footer">
         <p>helllo</p>
       </div>
