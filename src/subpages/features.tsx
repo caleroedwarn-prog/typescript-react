@@ -29,7 +29,7 @@ function Features() {
               Backup your tasks to the cloud so you never lose them. Sync across
               devices and stay productive.
             </p>
-            <Link to="/backups" className="feature-link">
+            <Link to="/backup" className="feature-link">
               Backup
             </Link>
           </div>
@@ -40,7 +40,7 @@ function Features() {
               Deleted a task by mistake? Find it in the recycle bin and restore
               with just one tap.
             </p>
-            <Link to="/recycling-bin" className="feature-link">
+            <Link to="/bin" className="feature-link">
               Recycling Bin
             </Link>
           </div>
@@ -51,8 +51,8 @@ function Features() {
             <p>
               Not sure if you completed a task? Check your previous tasks to see what you've accomplished and what still needs attention.
             </p>
-            <Link to="/recycling-bin" className="feature-link">
-              Recycling Bin
+            <Link to="/previousetask" className="feature-link">
+              previous
             </Link>
           </div>
         </div>
