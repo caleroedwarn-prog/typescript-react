@@ -3,6 +3,7 @@ import "../images/note.png";
 import ImageWelcome from "../subpages/home";
 import GridDisplay from "../subpages/gridDisplay";
 import Features from "../subpages/features";
+import Footer from "../subpages/footer";
 
 function Homepage() {
   return (
@@ -16,9 +17,10 @@ function Homepage() {
       <br />
       <br />
       <Features />
-      <div className="Footer">
-        <p>helllo</p>
-      </div>
+      <br />
+      <br />
+      <br />
+      <Footer />
     </>
   );
 }

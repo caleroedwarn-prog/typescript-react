@@ -1,8 +1,10 @@
+import React from "react";
+import "../static/footer.css";
 function Footer(){
     return (
       <div className="Footer">
         <span className="Contact">
-          <h2>contact info</h2>
+          <h3>contact info</h3>
           <p>
             Email:{" "}
             <a href="mailto:buameeemmanuel@gmail.com">
