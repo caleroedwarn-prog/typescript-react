@@ -1,0 +1,14 @@
+.Footer{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+}
+.Contact{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+}

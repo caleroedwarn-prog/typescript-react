@@ -1,14 +1,9 @@
-import noteImg from "../images/note.png";
+
 import { Link } from "react-router-dom";
 
 function ImageWelcome(){
     return(
         <>
-        <div className="background">
-        <div className="background-image">
-          <img src={noteImg} alt="message" />
-        </div>
-      </div>
       <div className="main-content">
         <pre>
           <h1

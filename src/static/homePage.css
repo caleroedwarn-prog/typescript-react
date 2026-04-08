@@ -14,27 +14,18 @@ body{
     margin: 0;
     padding: 0;
 }
-.background-image img{
-    position: absolute;
-    top: 1;
-    width: 100vw;
-    height: 100vh;
-    opacity: 0.13;
-    border-radius: 20px;
-    box-shadow: 100px 199px 190px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
-}
-.main-content{
+
+.main-content {
     position: relative;
     left: 60px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.1);
     width: 800px;
     min-height: 450px;
     margin-top: 15%;
     margin-bottom: 10%;
     border-radius: 30px;
     border-top-right-radius: 100px;
-    border-left: 1px solid greenyellow;
+    border-left: 10px solid rgb(123, 14, 187);
     z-index: 9999;
 }
 .main-content h1, h1, b{

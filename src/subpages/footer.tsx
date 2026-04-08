@@ -51,8 +51,8 @@ function Footer(){
             </a>
           </p>
         </span>
-        <p className="Contact">Supports</p>
-        <p className="Contact">Terms and Conditions</p>
+        <span className="Contact"><h3>Supports</h3></span>
+        <span className="Contact"><h3>Terms and Conditions</h3></span>
       </div>
     );
 }
