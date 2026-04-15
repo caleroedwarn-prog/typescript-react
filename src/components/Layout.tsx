@@ -51,11 +51,12 @@ function Layout() {
   }, [themeColor]);
 
   useEffect(() =>{
-    localStorage.setItem("darkMode", String(darkMode))
-  }, [darkMode])
+    localStorage.setItem("darkMode", String(darkMode));
+    document.body.classList.toggle("dark", darkMode);
+  }, [darkMode]);
 
   return (
-    <div className = {darkMode ? "app dark" : "app"}>
+    <div className={darkMode ? "app dark" : "app"}>
       <Navbar themeColor={themeColor} />
       <div className="menulist">
         <Hambourger />

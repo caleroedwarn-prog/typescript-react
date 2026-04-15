@@ -5,10 +5,10 @@ function Hambourger(){
     const[isToggle, setIsToggle] = useState(false);
 
     const toggleState = () =>{
-        setIsToggle(!isToggle);
+        setIsToggle((prev) => !prev);
     }
     const closeMenu = () => {
-        setIsToggle(!isToggle);
+        setIsToggle(false);
     }
     return (
       <div>
