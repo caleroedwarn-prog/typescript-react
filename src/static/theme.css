@@ -1,15 +1,4 @@
-:root{
-    --bg: #fff;
-    --text: #1111;
-    --card: #f5f5f5; 
-}
-body.dark,
-.dark,
-.app.dark {
-    --bg: #0f172a;
-    --text: #ffffff;
-    --card: #1e293b;
-}
+
 body{
     margin: 0;
     padding: 0;
@@ -25,6 +14,7 @@ body{
     position: relative;
     width: 50px;
     height: 25px;
+    top: 70px;
 }
 .switch input{
     border: 1px solid #000;

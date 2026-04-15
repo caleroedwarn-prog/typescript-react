@@ -10,12 +10,10 @@ interface ContextType {
   setDeletedTask: React.Dispatch<React.SetStateAction<TaskType[]>>;
   previouseTask: TaskType[];
   setPreviouseTask: React.Dispatch<React.SetStateAction<TaskType[]>>;
-  darkMode: boolean;
-  setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 function Settings(){
-    const { darkMode, setDarkMode, themeColor, setThemeColor } = useOutletContext<ContextType>();
+    const { themeColor, setThemeColor } = useOutletContext<ContextType>();
     const colorPalette = [
       "#FF6633", "#FFB399", "#FF33FF", "#FFFF99",
       "#00B3E6", "#E6B333", "#3366E6", "#999966",
@@ -25,11 +23,37 @@ function Settings(){
       "#66994D", "#B366CC",
     ];
 
+    const { task } = useOutletContext<ContextType>()
+    const exportTasks = () => {
+      const data = JSON.stringify(task, null, 2)
+      const blob = new Blob([data], { type: "application/json" })
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement("a")
+      a.href = url
+      a.download = "tasks-backup.json"
+      a.click()
+
+      URL.revokeObjectURL(url)
+    }
+
     return (
-      <>
-        <div style={{ maxWidth: "720px", margin: "60px auto 0", padding: "0 18px" }}>
-          <div style={{ marginBottom: "11px", textAlign: "center" }}>
-            <h3 style={{ marginBottom: "1px", fontSize: "1.15rem" }}>
+      <div
+        style={{
+          border: "1px solid #000",
+          backgroundColor: "#0e0000",
+          height: "100%",
+          overflowY: "auto",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "720px",
+            margin: "60px auto 0",
+            padding: "0 18px",
+          }}
+        >
+          <div style={{ marginBottom: "11px" }}>
+            <h3 style={{ marginBottom: "1px", fontSize: "1.05rem" }}>
               Pick a theme color
             </h3>
             <div
@@ -51,7 +75,10 @@ function Settings(){
                     width: "60px",
                     height: "60px",
                     borderRadius: "16px",
-                    border: color === themeColor ? "3px solid #000" : "2px solid #ddd",
+                    border:
+                      color === themeColor
+                        ? "3px solid #000"
+                        : "2px solid #ddd",
                     backgroundColor: color,
                     boxShadow: "0 8px 16px rgba(0, 0, 0, 0.08)",
                     cursor: "pointer",
@@ -92,19 +119,23 @@ function Settings(){
                 cursor: "pointer",
               }}
             />
+            <label htmlFor="backup"> Download ur task here</label>
+            <button
+              style={{
+                position: "absolute",
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "end",
+                left: "60%",
+              }}
+              type="button"
+              onClick={exportTasks}
+            >
+              Export
+            </button>
           </div>
-          <h2> Choose theme Color</h2>
-
-          <label className="switch">
-            <input
-            type="checkbox"
-            checked={darkMode}
-            onChange={() => setDarkMode(prev => !prev)}
-            />
-            <span className="slider round"></span>
-          </label>
         </div>
-      </>
+      </div>
     );
 }
 export default Settings; 

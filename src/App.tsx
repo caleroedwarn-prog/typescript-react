@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React from 'react';
 import Homepage from './pages/homePage';
 import './static/homePage.css';
-import './static/theme.css';
 import Tasks from './pages/Task';
 import Layout from './components/Layout';
 import PreviouseTask from './pages/previoustask';

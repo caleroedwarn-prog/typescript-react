@@ -30,10 +30,6 @@ function Layout() {
     return localStorage.getItem("themeColor") || "#4CAF50";
   });
 
-  const [darkMode, setDarkMode] = useState(() =>{
-    return localStorage.getItem("darkMode") === "true"
-  })
-
   useEffect(() => {
     localStorage.setItem("task", JSON.stringify(task));
   }, [task]);
@@ -50,13 +46,9 @@ function Layout() {
     localStorage.setItem("themeColor", themeColor);
   }, [themeColor]);
 
-  useEffect(() =>{
-    localStorage.setItem("darkMode", String(darkMode));
-    document.body.classList.toggle("dark", darkMode);
-  }, [darkMode]);
 
   return (
-    <div className={darkMode ? "app dark" : "app"}>
+    <div>
       <Navbar themeColor={themeColor} />
       <div className="menulist">
         <Hambourger />
@@ -68,8 +60,6 @@ function Layout() {
             setTask,
             deletedTask,
             themeColor,
-            darkMode,
-            setDarkMode,
             setThemeColor,
             setDeletedTask,
             previouseTask,
