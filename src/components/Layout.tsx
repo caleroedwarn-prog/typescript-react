@@ -55,7 +55,7 @@ function Layout() {
   }, [darkMode])
 
   return (
-    <>
+    <div className = {darkMode ? "app dark" : "app"}>
       <Navbar themeColor={themeColor} />
       <div className="menulist">
         <Hambourger />
@@ -76,7 +76,7 @@ function Layout() {
           }}
         />
       </main>
-    </>
+    </div>
   );
 }
 export default Layout;
