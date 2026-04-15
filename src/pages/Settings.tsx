@@ -10,9 +10,12 @@ interface ContextType {
   setDeletedTask: React.Dispatch<React.SetStateAction<TaskType[]>>;
   previouseTask: TaskType[];
   setPreviouseTask: React.Dispatch<React.SetStateAction<TaskType[]>>;
+  darkMode: boolean;
+  setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 function Settings(){
+    const { darkMode, setDarkMode }  = useOutletContext<ContextType>();
     const { themeColor, setThemeColor } = useOutletContext<ContextType>();
     const colorPalette = [
       "#FF6633", "#FFB399", "#FF33FF", "#FFFF99",
@@ -91,6 +94,16 @@ function Settings(){
               }}
             />
           </div>
+          <h2> Choose theme Color</h2>
+
+          <label className="switch">
+            <input
+            type="checkbox"
+            checked={darkMode}
+            onChange={() => setDarkMode(prev => !prev)}
+            />
+            <span className="slider round"></span>
+          </label>
         </div>
       </>
     );
