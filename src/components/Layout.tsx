@@ -15,7 +15,7 @@ function Layout() {
     const saved = localStorage.getItem("task");
     return saved ? JSON.parse(saved) : [];
   });
-
+   
   const [deletedTask, setDeletedTask] = useState<TaskType[]>(() => {
     const saved = localStorage.getItem("deletedTask");
     return saved ? JSON.parse(saved) : [];
@@ -29,6 +29,10 @@ function Layout() {
   const [themeColor, setThemeColor] = useState(() => {
     return localStorage.getItem("themeColor") || "#4CAF50";
   });
+
+  const [darkMode, setDarkMode] = useState(() =>{
+    return localStorage.getItem("darkMode") === "true"
+  })
 
   useEffect(() => {
     localStorage.setItem("task", JSON.stringify(task));
@@ -46,6 +50,10 @@ function Layout() {
     localStorage.setItem("themeColor", themeColor);
   }, [themeColor]);
 
+  useEffect(() =>{
+    localStorage.setItem("darkMode", String(darkMode))
+  }, [darkMode])
+
   return (
     <>
       <Navbar themeColor={themeColor} />
@@ -59,6 +67,8 @@ function Layout() {
             setTask,
             deletedTask,
             themeColor,
+            darkMode,
+            setDarkMode,
             setThemeColor,
             setDeletedTask,
             previouseTask,
