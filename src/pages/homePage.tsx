@@ -1,5 +1,4 @@
 import "../static/homePage.css";
-import "../images/note.png";
 import ImageWelcome from "../subpages/home";
 import GridDisplay from "../subpages/gridDisplay";
 import Features from "../subpages/features";
