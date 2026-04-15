@@ -25,17 +25,18 @@ function Settings(){
 
     return (
       <>
-        <h2>Settings page</h2>
         <div style={{ maxWidth: "720px", margin: "60px auto 0", padding: "0 18px" }}>
-          <div style={{ marginBottom: "24px", textAlign: "center" }}>
-            <h3 style={{ marginBottom: "14px", fontSize: "1.15rem" }}>
+          <div style={{ marginBottom: "11px", textAlign: "center" }}>
+            <h3 style={{ marginBottom: "1px", fontSize: "1.15rem" }}>
               Pick a theme color
             </h3>
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
-                gap: "14px",
+                gridTemplateColumns: "repeat(4, 60px)",
+                rowGap: "1px",
+                columnGap: "2px",
+                justifyContent: "center",
               }}
             >
               {colorPalette.map((color) => (
@@ -45,8 +46,8 @@ function Settings(){
                   onClick={() => setThemeColor(color)}
                   aria-label={`Select ${color} theme color`}
                   style={{
-                    width: "100%",
-                    aspectRatio: "1 / 1",
+                    width: "60px",
+                    height: "60px",
                     borderRadius: "16px",
                     border: color === themeColor ? "3px solid #000" : "2px solid #ddd",
                     backgroundColor: color,
@@ -85,6 +86,7 @@ function Settings(){
                 border: "none",
                 padding: 0,
                 background: "none",
+                borderRadius: "80px",
                 cursor: "pointer",
               }}
             />
