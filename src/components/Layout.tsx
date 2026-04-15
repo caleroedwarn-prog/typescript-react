@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
-import "../static/layer.css"
 import Hambourger from "./Hambourger";
 import { useState, useEffect } from "react";
+
 
 export type TaskType = {
   name: string;
@@ -22,9 +22,9 @@ function Layout() {
   });
 
   const [previouseTask, setPreviouseTask] = useState<TaskType[]>(() => {
-    const saved = localStorage.getItem("previouseTask")
+    const saved = localStorage.getItem("previouseTask");
     return saved ? JSON.parse(saved) : [];
-  })
+  });
 
   useEffect(() => {
     localStorage.setItem("task", JSON.stringify(task));
@@ -34,18 +34,27 @@ function Layout() {
     localStorage.setItem("deletedTask", JSON.stringify(deletedTask));
   }, [deletedTask]);
 
-  useEffect(() =>{
+  useEffect(() => {
     localStorage.setItem("previouseTask", JSON.stringify(previouseTask));
-  })
+  });
 
   return (
     <>
       <Navbar />
       <div className="menulist">
-      <Hambourger />
+        <Hambourger />
       </div>
       <main>
-        <Outlet context={{ task, setTask, deletedTask, setDeletedTask, previouseTask, setPreviouseTask }} />
+        <Outlet
+          context={{
+            task,
+            setTask,
+            deletedTask,
+            setDeletedTask,
+            previouseTask,
+            setPreviouseTask,
+          }}
+        />
       </main>
     </>
   );
