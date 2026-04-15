@@ -3,7 +3,6 @@ import Navbar from "./Navbar";
 import Hambourger from "./Hambourger";
 import { useState, useEffect } from "react";
 
-
 export type TaskType = {
   name: string;
   date: string;
@@ -26,6 +25,10 @@ function Layout() {
     return saved ? JSON.parse(saved) : [];
   });
 
+  const [themeColor, setThemeColor] = useState(() => {
+    return localStorage.getItem("themeColor") || "#4CAF50"
+  })
+
   useEffect(() => {
     localStorage.setItem("task", JSON.stringify(task));
   }, [task]);
@@ -37,6 +40,10 @@ function Layout() {
   useEffect(() => {
     localStorage.setItem("previouseTask", JSON.stringify(previouseTask));
   });
+
+  useEffect(() => {
+    localStorage.setItem("themeColor", themeColor);
+  }, [themeColor])
 
   return (
     <>
@@ -50,6 +57,7 @@ function Layout() {
             task,
             setTask,
             deletedTask,
+            themeColor,
             setDeletedTask,
             previouseTask,
             setPreviouseTask,
