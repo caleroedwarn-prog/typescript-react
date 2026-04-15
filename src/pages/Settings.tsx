@@ -14,16 +14,25 @@ interface ContextType {
 
 function Settings(){
     const { themeColor, setThemeColor } = useOutletContext<ContextType>();
-    return(
-        <>
+    return (
+      <>
         <h2> Settings page</h2>
-     <label htmlFor="color">Choose theme color: </label>
-        <input 
-        title="color"
-        type="color"
-        value={themeColor}
-        onChange={(e) => setThemeColor(e.target.value)} />
-        </>
+        <div
+          style={{
+            position: "relative",
+            top: "100px",
+            textAlign: "center",
+          }}
+        >
+          <label htmlFor="color">Choose theme color: </label>
+          <input
+            title="color"
+            type="color"
+            value={themeColor}
+            onChange={(e) => setThemeColor(e.target.value)}
+          />
+        </div>
+      </>
     );
 }
 export default Settings; 

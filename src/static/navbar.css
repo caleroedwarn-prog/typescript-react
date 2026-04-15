@@ -6,14 +6,15 @@ body{
     display: flex;
     gap: 12%;
     padding: 15px;
-    background: #00071a;
+    background-color: var(--navbar-bg, #00071a);
+    color: var(--navbar-text, white);
     justify-content: center;
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.9);
     z-index: 10000;
 }
 .nav-link{
     text-decoration: none;
-    color: white;
+    color: inherit;
     font-size: 25px;
     transition: 0.3s;
 }

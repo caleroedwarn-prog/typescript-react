@@ -47,7 +47,7 @@ function Layout() {
 
   return (
     <>
-      <Navbar />
+      <Navbar themeColor={themeColor} />
       <div className="menulist">
         <Hambourger />
       </div>
