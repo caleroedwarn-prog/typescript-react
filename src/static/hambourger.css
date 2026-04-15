@@ -2,6 +2,13 @@ body{
     margin: 0;
 }
 
+.menulist {
+    position: fixed;
+    top: 110px;
+    right: 20px;
+    z-index: 10000;
+}
+
 .Hambourger{
     width: 25px;
     height: 10px;
@@ -45,8 +52,8 @@ body{
 }
 
 .menu{
-    position: absolute;
-    top: 40px;
+    position: fixed;
+    top: 110px;
     right: 0;
     display: flex;
     flex-direction: column;

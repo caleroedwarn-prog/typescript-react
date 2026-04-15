@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import Hambourger from "./Hambourger";
 import { useState, useEffect } from "react";
+import "../static/layer.css";
 
 export type TaskType = {
   name: string;
@@ -51,7 +52,7 @@ function Layout() {
       <div className="menulist">
         <Hambourger />
       </div>
-      <main>
+      <main className="main-layout">
         <Outlet
           context={{
             task,

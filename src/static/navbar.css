@@ -1,8 +1,14 @@
 body{
     margin: 0;
     color: white;
+    padding-top: 130px;
 }
 .Navbar{
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    width: 100%;
     display: flex;
     gap: 12%;
     padding: 15px;
@@ -11,6 +17,7 @@ body{
     justify-content: center;
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.9);
     z-index: 10000;
+    box-sizing: border-box;
 }
 .nav-link{
     text-decoration: none;
