@@ -26,8 +26,8 @@ function Layout() {
   });
 
   const [themeColor, setThemeColor] = useState(() => {
-    return localStorage.getItem("themeColor") || "#4CAF50"
-  })
+    return localStorage.getItem("themeColor") || "#4CAF50";
+  });
 
   useEffect(() => {
     localStorage.setItem("task", JSON.stringify(task));
@@ -43,7 +43,7 @@ function Layout() {
 
   useEffect(() => {
     localStorage.setItem("themeColor", themeColor);
-  }, [themeColor])
+  }, [themeColor]);
 
   return (
     <>
@@ -58,6 +58,7 @@ function Layout() {
             setTask,
             deletedTask,
             themeColor,
+            setThemeColor,
             setDeletedTask,
             previouseTask,
             setPreviouseTask,
